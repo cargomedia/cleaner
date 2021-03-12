@@ -1,0 +1,24 @@
+{
+  "name": "cleaner",
+  "version": "0.0.1",
+  "description": "Deletes old closed issues that had no activity for a specified amount of time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt"
+  },
+  "author": "Daniel Londero <daniel.londero@cargomedia.ch>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "dayjs": "^1.10.4"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cargomedia/cleaner.git"
+  }
+}

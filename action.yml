@@ -1,0 +1,24 @@
+name: 'Issue Cleaner'
+description: 'Delete old issues after a predefined time'
+inputs:
+  repository-token:
+    description: 'Token for the repository. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.'
+    required: false
+    default: ${{ github.token }}
+  repository-name:
+    description: 'Name of the repository.'
+    required: true
+  repository-owner:
+    description: 'Owner of the repository.'
+    required: true
+  days-before-deletion:
+    description: 'The number of days to wait from last update before deleting an issue.'
+    required: false
+    default: '365'
+  dry-run:
+    description: 'Run the action in dry-run mode without actually deleting any issue.'
+    default: 'false'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
