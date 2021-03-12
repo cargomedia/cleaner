@@ -25,7 +25,7 @@ jobs:
   cleaner:
     runs-on: ubuntu-latest
     steps:
-      - uses: cargomedia/cleaner@master
+      - uses: cargomedia/cleaner@main
         with:
           repository-name: 'foo'
           repository-owner: 'bar'
@@ -42,7 +42,7 @@ jobs:
   cleaner:
     runs-on: ubuntu-latest
     steps:
-      - uses: cargomedia/cleaner@master
+      - uses: cargomedia/cleaner@main
         with:
           repository-token: ${{ secrets.GITHUB_TOKEN }}
           repository-name: 'foo'
@@ -60,7 +60,7 @@ jobs:
   cleaner:
     runs-on: ubuntu-latest
     steps:
-      - uses: cargomedia/cleaner@master
+      - uses: cargomedia/cleaner@main
         with:
           repository-token: ${{ secrets.GITHUB_TOKEN }}
           repository-name: 'foo'
