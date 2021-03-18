@@ -2,9 +2,8 @@ name: 'Issue Cleaner'
 description: 'Delete old issues after a predefined time'
 inputs:
   repository-token:
-    description: 'Token for the repository. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.'
-    required: false
-    default: ${{ github.token }}
+    description: 'Token for the repository. Can be passed in using `{{ secrets.PERSONAL_TOKEN }}`.'
+    required: true
   repository-name:
     description: 'Name of the repository.'
     required: true
