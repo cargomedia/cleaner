@@ -51,12 +51,26 @@ jobs:
           days-before-deletion: 42
 ```
 
+Dry-run to check what issues would be deleted without actually deleting them:
+```yaml
+name: 'Delete old issues'
+on:
+  schedule:
+    - cron: '30 9 * * 1'
+
+jobs:
+  cleaner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cargomedia/cleaner@main
+        with:
+          repository-token: ${{ secrets.PERSONAL_TOKEN }}
+          repository-name: 'foo'
+          repository-owner: 'bar'
+          dry-run: true
+```
+
 ### Personal Access Token
 In order to [delete issues](https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#repository-access-for-each-permission-level) 
 the `Admin` permission is required. As `{{ secrets.GITHUB_TOKEN }}` has only `write` permission on issues it is needed to [create a Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 with scope `repo` and [add it as secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) in your workflow's repository so it can be used in the action.
-
-### Debugging
-
-**Dry-run:**  
-You can run this action in dry-run mode (no actions will be taken on your issues) by passing `dry-run` set to `true` as an argument to the action.
