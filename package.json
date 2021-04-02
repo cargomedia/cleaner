@@ -1,6 +1,6 @@
 {
   "name": "cleaner",
-  "version": "0.0.1",
+  "version": "v1.0.0",
   "description": "Deletes old closed issues that had no activity for a specified amount of time",
   "main": "index.js",
   "scripts": {

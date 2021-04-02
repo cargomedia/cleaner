@@ -25,7 +25,7 @@ jobs:
   cleaner:
     runs-on: ubuntu-latest
     steps:
-      - uses: cargomedia/cleaner@main
+      - uses: cargomedia/cleaner@v1.0.0
         with:
           repository-token: ${{ secrets.PERSONAL_TOKEN }}
           repository-name: 'foo'
@@ -43,7 +43,7 @@ jobs:
   cleaner:
     runs-on: ubuntu-latest
     steps:
-      - uses: cargomedia/cleaner@main
+      - uses: cargomedia/cleaner@v1.0.0
         with:
           repository-token: ${{ secrets.PERSONAL_TOKEN }}
           repository-name: 'foo'
@@ -62,7 +62,7 @@ jobs:
   cleaner:
     runs-on: ubuntu-latest
     steps:
-      - uses: cargomedia/cleaner@main
+      - uses: cargomedia/cleaner@v1.0.0
         with:
           repository-token: ${{ secrets.PERSONAL_TOKEN }}
           repository-name: 'foo'
